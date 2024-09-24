@@ -1,4 +1,12 @@
-﻿using System.Text;
+﻿// Author:  Kyle Chapman
+// Created: September 17, 2024
+// Modified: September 24, 2024
+// Description:
+//  Attempts to measure whether a user has too many pets or not using
+// a super-secret proprietary algorithm. It's so secret I don't know
+// what it is as of this writing.
+
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +24,13 @@ namespace TooManyPets
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Constructor for the form.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
+            textPeople.Focus();
         }
 
         #region "Event Handlers"
@@ -45,7 +57,7 @@ namespace TooManyPets
         /// </summary>
         private void ExitClick(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
         #endregion
